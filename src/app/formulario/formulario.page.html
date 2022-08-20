@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Datos</ion-title>
+    <ion-button
+      style="font-size: 20pt"
+      slot="end"
+      (click)="cerrarModal()"
+      expand="block"
+      fill="clear"
+      shape="round">
+      <ion-icon slot="end" name="close-outline" color="dark"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Imagen:</ion-label>
+      <ion-input
+        type="text"
+        placeholder="Imagen: Ubique una URL de Imagen"
+        id="txtImagen"
+        name="txtImagen"
+        [(value)]="imagen"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fuente:</ion-label>
+      <ion-input
+        type="text"
+        placeholder="Escriba la fuente de la noticia"
+        id="txtFuente"
+        name="txtFuente"
+        [(value)]="fuente"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Titulo:</ion-label>
+      <ion-input
+        type="text"
+        placeholder="Escriba el titulo de la Noticia"
+        id="txtTitulo"
+        name="txtTitulo"
+        [(value)]="titulo"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Contenido:</ion-label>
+      <ion-input
+        type="text"
+        placeholder="Escriba el contenido de la noticia"
+        id="txtContenido"
+        name="txtContenido"
+        [(value)]="contenido"
+      ></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button color="warning" (click)="guardarDatos()" expand="block">
+    Guardar
+  </ion-button>
+</ion-content>
+
